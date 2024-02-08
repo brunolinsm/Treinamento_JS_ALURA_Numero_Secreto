@@ -1,5 +1,4 @@
 function verificaValidadeChute(chute) {
-    //Transforma o número em inteiro
     const numero = +chute
     if (chuteForInvalido(numero)) {
         elementoChute.innerHTML += `<div>Valor inválido!</div>`
