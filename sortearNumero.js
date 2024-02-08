@@ -7,7 +7,6 @@ const elementoMaiorValor = document.getElementById('maior-valor')
 elementoMenorValor.innerHTML = menorValor
 elementoMaiorValor.innerHTML = maiorValor
 
-
 function gerarNumeroAleatorio (){
     return parseInt(Math.random() * maiorValor + 1)
 }
