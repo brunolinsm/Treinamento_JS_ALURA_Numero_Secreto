@@ -1,5 +1,4 @@
 function verificaValidadeChute(chute) {
-    //Transforma o número em inteiro
     const numero = +chute
     if (chuteForInvalido(numero)) {
         elementoChute.innerHTML += `<div>Valor inválido!</div>`
@@ -14,7 +13,9 @@ function verificaValidadeChute(chute) {
     if (numero === numeroSecreto) {
         document.body.innerHTML = `
         <h2>Você acertou! Parabéns!</h2>
-        <h3>O número secreto era ${numeroSecreto}</h3>`
+        <h3>O número secreto era ${numeroSecreto}</h3>
+        <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>
+        `
     }
 
     else if (numero > numeroSecreto) {
@@ -35,3 +36,9 @@ function chuteForInvalido(numero) {
 function numeroForaFaixaValores(numero) {
     return numero > maiorValor || numero < menorValor
 }
+
+document.body.addEventListener('click', evento => {
+    if (evento.target.id == 'jogar-novamente') {
+        window.location.reload()
+    }
+})
